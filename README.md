@@ -2,7 +2,7 @@
 Shell script that generates name and pronoun messages with user inputs.
 
 ## basic instructions:
-1. download the file "pronounTryouts.sh"
+1. download the file "pronounTryouts.sh": click on the file, then right click on Raw and select 'Download Linked File'
 2. get the file path of the file
 3. open terminal and write "bash (insert file path)"
 4. enjoy your name and pronoun messages~
