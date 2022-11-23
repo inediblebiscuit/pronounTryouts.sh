@@ -1,4 +1,4 @@
-# pronounTryouts_shell
+# pronounTryouts.sh
 Shell script that generates name and pronoun messages with user inputs.
 
 ## basic instructions:
