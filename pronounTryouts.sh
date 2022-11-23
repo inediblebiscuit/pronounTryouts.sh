@@ -15,7 +15,7 @@ function getprns {
     echo "
     please enter your name and pronouns here:
     e.g. Mary she ; Tim oth ; Ann name"
-    read name pron
+    read -r name pron
 
     if [ -z "$name" ]; then
     getprns
@@ -29,7 +29,7 @@ getprns
 
 function loadprns {
 
-    if [ $pron = "he" ]; then
+    if [ "$pron" = "he" ]; then
     sub="he"
     obj="him"
     pod="his"
@@ -38,9 +38,10 @@ function loadprns {
     sub1="$sub's"
     sub2="$sub's"
     subHave="$sub has"
+    # I need subGOES too help argh
     subIs="$sub is"
 
-    elif [ $pron = "she" ]; then
+    elif [ "$pron" = "she" ]; then
     sub="she"
     obj="her"
     pod="her"
@@ -51,7 +52,7 @@ function loadprns {
     subHave="$sub has"
     subIs="$sub is"
 
-    elif [ $pron = "they" ]; then
+    elif [ "$pron" = "they" ]; then
     sub="they"
     obj="them"
     pod="their"
@@ -62,22 +63,16 @@ function loadprns {
     subHave="$sub have"
     subIs="$sub are"
 
-    elif [ $pron = "oth" ]; then
+    elif [ "$pron" = "oth" ]; then
     echo '
     please enter your pronouns:'
-    read sub obj pod pop ref
-    sub="$sub"
-    obj="$obj"
-    pod="$pod"
-    pop="$pop"
-    ref="$ref"
+    read -r sub obj pod pop ref
     sub1="$sub's"
     sub2="$sub's"
     subHave="$sub has"
     subIs="$sub is"
 
-    elif [ $pron = "name" ]; then
-    name="$name"
+    elif [ "$pron" = "name" ]; then
     sub="$name"
     obj="$name"
     pod="$name's"
@@ -196,37 +191,49 @@ function getMessage {
     echo "
     loading..."
     sleep 0.85
-    # echo $name $pron $sub $obj $pod $pop $ref
-    echo ${arr[ $RANDOM % $(($length-1)) ]}
+    echo "${arr[ $RANDOM % $((length-1)) ]}"
 }
 getMessage
 
 function newMessage {
     echo '
     Generate another message? [y/n]
-    Press [x] to edit name and pronouns'
+    Press [x] to view/edit name and pronouns'
 
-    read response
+    read -r response
 
     if [ -z "$response" ]; then
     response=null
     newMessage
 
-    elif [ $response = "y" ]; then
+    elif [ "$response" = "y" ]; then
     getMessage
     newMessage
 
-    elif [ $response = "n" ]; then
+    elif [ "$response" = "n" ]; then
     echo "
     Goodbye!"
     exit
 
-    elif [ $response = "x" ]; then
-    getprns
-    loadprns
-    getMessage
-    newMessage
+    elif [ "$response" = "x" ]; then
+    echo "$name" "$pron" "$sub" "$obj" "$pod" "$pop" "$ref"
+    function editprn {
+        echo "Edit pronouns? [y/n]"
+        read -r edit
+        if [ "$edit" = "y" ]; then
+        getprns
+        loadprns
+        getMessage
+        newMessage
+        elif [ "$edit" = "n" ]; then
+        newMessage
+        else
+        editprn
+        fi
 
+    }
+    editprn
+    
     else
     response=null
     newMessage
