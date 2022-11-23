@@ -11,7 +11,8 @@ tbh you shouldn't trust sketchy downloads like this, but it's readable even from
 
 ## some features I've included:
 - supports he, she, they, custom pronouns, and name only messages.
-- allows editing of name and pronouns without closing the program
+- allows editing of name and pronouns without closing the program.
+- feel free to create a pull request and add some new messages.
 
 ## upcoming features:
 - making a webpage that does this
