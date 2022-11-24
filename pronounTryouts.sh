@@ -175,15 +175,15 @@ function getMessage {
 
         "My partner $name gave me this bouquet, aren’t the flowers so pretty? $sub put my favorite flowers in this bouquet." 
 
-        "Where is $name? $sub’re never late." 
+        "Where is $name? $sub1 never late." 
 
         "$name is going to have a job interview later. Wish $obj luck!" 
 
-        "This is my younger sibling $name. $sub’re very busy with school and work." 
+        "This is my younger sibling $name. $sub1 very busy with school and work." 
 
-        "$name is the best child any parent can ask for. $sub’re very polite and compassionate." 
+        "$name is the best child any parent can ask for. $sub1 very polite and compassionate." 
 
-        "Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub’re very good at it. Maybe $sub can give me some advice." 
+        "Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub1 very good at it. Maybe $sub can give me some advice." 
 
         "The food here is so good! Thanks for taking us here, $name! See? I told you $name knows all the best restaurants in town!" 
     )
