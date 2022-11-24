@@ -216,9 +216,9 @@ function newMessage {
     exit
 
     elif [ "$response" = "x" ]; then
-    echo "$name" "$pron" "$sub" "$obj" "$pod" "$pop" "$ref"
+    echo "   " "$name" "$pron" "$sub" "$obj" "$pod" "$pop" "$ref"
     function editprn {
-        echo "Edit pronouns? [y/n]"
+        echo "    Edit pronouns? [y/n]"
         read -r edit
         if [ "$edit" = "y" ]; then
         getprns
