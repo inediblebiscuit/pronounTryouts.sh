@@ -97,7 +97,8 @@ function loadprns {
 loadprns
 
 function getMessage {
-    #39 messages so far
+    #40 messages so far
+    #REMEMBER TO REMIVE ECHO LENGTH BEFORE COMMIT IF YOU HAVEN'T
     arr=(
         "Have I introduced you to $name? $sub1 my sibling. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with someone else. We all get along really well. I think you'll really like $name, $sub1 really cool." 
 
@@ -183,7 +184,6 @@ function getMessage {
     length=${#arr[*]}
     echo "
     loading..."
-    echo $length
     sleep 0.85
     echo "${arr[ $RANDOM % $((length-1)) ]}"
 }
