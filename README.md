@@ -9,6 +9,8 @@ Shell script that generates name and pronoun messages with user inputs.
 
 tbh you shouldn't trust sketchy downloads like this, but it's readable even from the drive link I provided above. so you can see that it's a simple text-based script only. all the best and enjoy!
 
+If you're wondering why templateMessages.sh doesn't need to be downloaded, this is only a copy of the messages inside the main script.
+
 ## some features I've included:
 - supports he, she, they, custom pronouns, and name only messages.
 - allows editing of name and pronouns without closing the program.

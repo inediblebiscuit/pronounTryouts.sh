@@ -57,7 +57,7 @@ function loadprns {
     obj="them"
     pod="their"
     pop="theirs"
-    ref="themselves"
+    ref="themself"
     sub1="$sub're"
     sub2="$sub've"
     subHave="$sub have"
@@ -90,25 +90,24 @@ function loadprns {
 
 }
 #need to make variables for $adr for Miss, Mr
-#Miss, Ma'am, Sir
+#Miss, Ma'am, Sir 
 #$child for son, daughter, child
 #$sib for sister, brother, sibling
 #$parent mother, mum; father, dad; parent
 loadprns
 
 function getMessage {
+    #39 messages so far
     arr=(
         "Have I introduced you to $name? $sub1 my sibling. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with someone else. We all get along really well. I think you'll really like $name, $sub1 really cool." 
-        
+
         "Huh? What did $name just say? Can you repeat what $sub said?’" 
 
         "$name is finally free to hang out today, so $sub’ll be joining us at lunchtime." 
 
         "Say hi, this is my friend $name, I don’t think you’ve met $obj yet but I think you’ll get along with $obj." 
 
-        "We can’t leave now, $name isn’t here yet, let’s wait a few more minutes" 
-
-        "$name and I have a lot of classes together. I’ve heard $sub also likes chemistry and $sub’s in my friend’s chem class. apparently $sub’s a gamer, i wonder what $sub plays and if we have any in common." 
+        "We can’t leave now, $name isn’t here yet, let’s wait for $obj a while longer." 
 
         "Yeah, I'm going over to $name's house tomorrow, 'cause $sub said $sub would help me with the math homework. $name is pretty good at math, y'know? And then I want to meet $pod pet cat. I think later this week $sub'll come over to meet my dog." 
 
@@ -155,17 +154,17 @@ function getMessage {
 
         "$name's birthday is soon. $sub invited me to $pod party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Have $sub been talking about anything $sub would like to have?" 
 
-        "Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it themself, or if $sub go to a hairdresser. I should ask $obj when I see $obj again!" 
+        "Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it $ref, or if $sub go to a hairdresser. I should ask $obj when I see $obj again!" 
 
         "A couple of days ago, I met $name. I got to talk to $obj for a bit and $sub seemed really cool! $sub suggested we go to the cinema together this weekend. Do you maybe want to join us and say hi to them? I'm sure $name would be happy to introduce $ref to you!" 
 
-        "$name and I were supposed to meet up here, but $sub seem to be running late. I've thought about calling $obj, but maybe $sub1 just stuck in traffic. $sub mentioned the roads tend to be quite busy during this time of the day. I'm sure $sub will be here soon. Oh, wait, I think that's $obj over there! Hi $name!" 
+        "$name and I were supposed to meet up here, but $sub seem to be running late. I've thought about calling them, but maybe $sub1 just stuck in traffic. $sub mentioned the roads tend to be quite busy during this time of the day. I'm sure $sub will be here soon. Oh, wait, I think that's $obj over there! Hi $name!" 
 
         "Have you seen $name? I borrowed a book from $obj earlier and want to return it to $obj, but I can't seem to find $obj anywhere! If you see $name, can you let $obj know I'm looking for $obj?" 
 
         "Do you see that person over there? $pod name is $name, and $sub1 my friend! $sub1 super nice, I think you would get along great with $obj. Do you want to go say hi to $obj? I'm sure $sub would be glad to meet you!" 
 
-        "Do you know where $name is? I've been trying to find them. I wanted to ask $obj a question, but $pod phone is turned off. Maybe $sub1 busy at the moment. I'll just try to call $obj tomorrow again!" 
+        "Do you know where $name is? I've been trying to find $obj. I wanted to ask $obj a question, but $pod phone is turned off. Maybe $sub1 busy at the moment. I'll just try to call $obj tomorrow again!" 
 
         "My partner $name gave me this bouquet, aren’t the flowers so pretty? $sub put my favorite flowers in this bouquet." 
 
@@ -173,17 +172,18 @@ function getMessage {
 
         "$name is going to have a job interview later. Wish $obj luck!" 
 
-        "This is my younger sibling $name. $sub’re very busy with school and work." 
+        "This is my younger sibling $name. $sub1 very busy with school and work." 
 
         "$name is the best child any parent can ask for. $sub1 very polite and compassionate." 
 
         "Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub1 very good at it. Maybe $sub can give me some advice." 
 
-        "The food here is so good! Thanks for taking us here, $name! See? I told you $sub knows all the best restaurants in town!" 
+        "The food here is so good! Thanks for taking us here, $name! See? I told you $name knows all the best restaurants in town!" 
     )
     length=${#arr[*]}
     echo "
     loading..."
+    echo $length
     sleep 0.85
     echo "${arr[ $RANDOM % $((length-1)) ]}"
 }

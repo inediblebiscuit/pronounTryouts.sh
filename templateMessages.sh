@@ -8,16 +8,15 @@
 
 "Say hi, this is my friend $name, I don’t think you’ve met $obj yet but I think you’ll get along with $obj." 
 
-"We can’t leave now, $name isn’t here yet, let’s wait a few more minutes" 
+"We can’t leave now, $name isn’t here yet, let’s wait for $obj a while longer." 
 
-"$name and I have a lot of classes together. I’ve heard $sub also likes chemistry and $sub’s in my friend’s chem class. apparently $sub’s a gamer, i wonder what $sub plays and if we have any in common." 
+"$name and i have physics and math together. i’ve heard $sub also likes chemistry and $sub’s in my friend’s chem class. apparently $sub’s a gamer, i wonder what $sub plays and if we have any in common." 
 
-"Yeah, I'm going over to $name's house tomorrow, 'cause $sub said $sub would help me with the math homework. $name is pretty good at math, y'know? And then I want to meet $pod pet cat. I think later this week $sub'll come over to meet my dog." 
+"Yeah, I'm going over to $name's house tomorrow, 'cause $sub said $sub would help me with the math homework. $name is pretty good at math, y'know? And then I want to meet $pod pet bird. I think later this week $sub'll come over to meet my dog." 
 
 "Have you met $name yet? $sub1 in my chemistry class. Me and $name sat next to each other one time and talked about birds until the teacher told us to be quiet. I find $pod name very interesting." 
 
-"$name hasn’t showed up yet, did $sub get lost or something? It’s $pod first time coming here, so let’s wait for $obj a while longer. 
-Oh, there $subIs. Hello! " 
+"$name hasn’t showed up yet, did $sub get lost or something? It’s $pod first time coming here, so let’s wait for $obj a while longer. Oh, there $subIs. Hello! " 
 
 "$name is free this afternoon if you want to talk to $obj. You can ask $obj about it now. " 
 
@@ -35,7 +34,9 @@ Oh, there $subIs. Hello! "
 
 "Did you hear about $name’s newest creation? $sub made a beautiful painting of a campground that $pod family took $obj to back when $sub was a child. $name is so talented." 
 
-"Hey $name, $name is a great name, I just adored every $name I’ve ever met. What I would say to you is go for it and try out, but also don’t feel rushed and pressured to figure it out now. It’s rough to figure who you are, I see some people trying to rush to a conclusion or an answer, but everyone has their own pace, take your time, not saying it has to wait for ever but just, take your time. I wish you all the luck and love 💕" 
+
+
+"Hey $name, $name is one of the cutest names ever, I just adored every $name I’ve ever met. What I would say to you is go for it and try out, but also don’t feel rushed and pressured to figure it out now. I see some people rushing about trying to reach a conclusion as fast as possible, but everyone has their own pace, take your time, not saying it has to wait for ever but just, take your time. I wish you all the luck and love 💕" 
 
 "$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s cute but I’m not paying for everything just yet!" 
 
@@ -57,7 +58,7 @@ Oh, there $subIs. Hello! "
 
 "$name's birthday is soon. $sub invited me to $pod party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Have $sub been talking about anything $sub would like to have?" 
 
-"Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it themself, or if $sub go to a hairdresser. I should ask $obj when I see $obj again!" 
+"Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it $ref, or if $sub went to a hairdresser. I should ask $obj when I see $obj again!" 
 
 "A couple of days ago, I met $name. I got to talk to $obj for a bit and $sub seemed really cool! $sub suggested we go to the cinema together this weekend. Do you maybe want to join us and say hi to them? I'm sure $name would be happy to introduce $ref to you!" 
 
@@ -75,10 +76,12 @@ Oh, there $subIs. Hello! "
 
 "$name is going to have a job interview later. Wish $obj luck!" 
 
-"This is my younger sibling $name. $sub’re very busy with school and work." 
+"This is my younger sibling $name. $sub1 very busy with school and work." 
 
-"$name is the best child any parent can ask for. $sub1 very polite and compassionate." 
+"$name is the best child any parent can ask for. $sub’1 very polite and compassionate." 
 
 "Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub1 very good at it. Maybe $sub can give me some advice." 
 
-"The food here is so good! Thanks for taking us here, $name! See? I told you $sub knows all the best restaurants in town!" 
+"The food here is so good! Thanks for taking us here, $name! See? I told you $name knows all the best restaurants in town!" 
+)
+length=${#arr[*]}
