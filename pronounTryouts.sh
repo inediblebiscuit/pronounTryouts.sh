@@ -98,10 +98,8 @@ loadprns
 
 function getMessage {
     arr=(
-        # "Have I introduced you to $name? $sub1 my sibling. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with someone else. We all get along really well. Our mom says she's so happy to have another $child now. I think you'll really like $name, $sub1 a really cool guy." 
-
-        # "$name is just in the other room changing. No, I don’t think $sub forgot to bring the paintings. So the other day during the heist, I saw $obj slip the paintings into that bag of $pop. I know $name brought it into the car, and Zoe told me $sub saw the same bag in $pod car. Why don’t we go ask $name if $subHave the paintings to be sure? Well, why don’t you trust $name, I trust $obj. I doubt $sub would ever keep that painting for $ref, $name just isn’t that kind of person. Oh, hi $name, we were just talking about the paintings from Thursday. Nat here was wondering if you had them in your car. Wonderful! See Nat, we can trust $obj. Now go and get those bloody painting so we can meet the fence." 
-
+        "Have I introduced you to $name? $sub1 my sibling. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with someone else. We all get along really well. I think you'll really like $name, $sub1 really cool." 
+        
         "Huh? What did $name just say? Can you repeat what $sub said?’" 
 
         "$name is finally free to hang out today, so $sub’ll be joining us at lunchtime." 
@@ -131,15 +129,11 @@ function getMessage {
 
         "$name forgot $pod wallet today, do you have some spare cash to lend $obj? When you’ve finished your part on the document, send it to $name, $sub can take care of the rest." 
 
-        # "Did you hear about what $name did last week? $sub went hiking up the nearby mountains and carried a keyboard up with $obj. Like, wow, $sub carried an electric keyboard on $pod back like 8 kilometres up the face of a cliff, camped near the top, and spent the whole bloody next day playing the Tetris theme to the wind and clouds. I just hope that the keyboard is actually $pop, that thing looks pretty banged up from being carried that far." 
-
         "Hey, it's $name! $sub1 so cute and smart! $name is real good with computers too, $sub helped me out recently. I hope I'll be meeting $obj again soon, I love to hang out with $obj!" 
 
-        # "Oh, did you hear about $name’s newest creation? $sub made a beautiful painting of a campground that $pod family took $obj to back when $sub was a child. $name is sooo talented, I wish I was $obj." 
+        "Did you hear about $name’s newest creation? $sub made a beautiful painting of a campground that $pod family took $obj to back when $sub was a child. $name is so talented." 
 
-        # "Have you heard where $name went last Thursday? I heard that $sub went out with $pod friends to a spa. Also, did you see how perfect $pod hands look lately? We shook hands this morning and they are soooo soft. Like baby soft. I really need to ask $name where $sub went. And what $sub did.Oh, hi $name, we were just talking about you. I hope you are having a wonderful New Years. We heard that you went to a place south last week and wanted to know what you had done to your hands?No no no, they’re just so soooooft. Like, how?" 
-
-        # "Hey $name, $name is one of the cutest names ever, I just adored every $name I’ve ever met. What I would say to you is go for it and try out, but also don’t feel rushed and pressured to figure it out now. I am assuming you are a teen, sorry if I'm wrong, but it’s ruff to figure who you are, I see some teens going as if wondering for a few months is a live or die in a rush kind a thing, but everyone has their own pace, take your time, not saying it has to wait for ever but just, take your time. I wish you all the luck and love 💕" 
+        "Hey $name, $name is a great name, I just adored every $name I’ve ever met. What I would say to you is go for it and try out, but also don’t feel rushed and pressured to figure it out now. It’s rough to figure who you are, I see some people trying to rush to a conclusion or an answer, but everyone has their own pace, take your time, not saying it has to wait for ever but just, take your time. I wish you all the luck and love 💕" 
         
         "$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s cute but I’m not paying for everything just yet!" 
 
@@ -153,39 +147,39 @@ function getMessage {
 
         "Do you know $name? $sub1 my friend, and $sub1 really cool! You should meet $obj, I think you'd get along really well with $obj!" 
 
-        "$name told me about this show $sub2 been watching. It's called Masked Singer, and $sub said it's really good! $sub said I should check it out sometime." 
+        "$name told me about this show $sub2 been watching. $sub said it's really good! $sub said I should check it out sometime." 
 
         "$name's birthday is soon. $sub invited me to $obj party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Has $sub been talking about anything $sub'd like to have?" 
 
-        "I met $name at the park yesterday. I haven't seen $obj in quite some time, so it was nice to catch up with them! Talking to $obj is always so much fun. I'd love to meet up with $obj soon again!" 
+        "I met $name at the park yesterday. I haven't seen $obj in quite some time, so it was nice to catch up with $obj! Talking to $obj is always so much fun. I'd love to meet up with $obj soon again!" 
 
-        "$name's birthday is soon. $sub invited me to $pod party, but I still need to get a present for them! You're  $pod est friend, aren't you? Do you know what $sub like the most? Have $sub been talking about anything $sub would like to have?" 
+        "$name's birthday is soon. $sub invited me to $pod party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Have $sub been talking about anything $sub would like to have?" 
 
         "Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it themself, or if $sub go to a hairdresser. I should ask $obj when I see $obj again!" 
 
         "A couple of days ago, I met $name. I got to talk to $obj for a bit and $sub seemed really cool! $sub suggested we go to the cinema together this weekend. Do you maybe want to join us and say hi to them? I'm sure $name would be happy to introduce $ref to you!" 
 
-        "$name and I were supposed to meet up here, but $sub seem to be running late. I've thought about calling them, but maybe $sub1 just stuck in traffic. $sub mentioned the roads tend to be quite busy during this time of the day. I'm sure $sub will be here soon. Oh, wait, I think that's $obj over there! Hi $name!" 
+        "$name and I were supposed to meet up here, but $sub seem to be running late. I've thought about calling $obj, but maybe $sub1 just stuck in traffic. $sub mentioned the roads tend to be quite busy during this time of the day. I'm sure $sub will be here soon. Oh, wait, I think that's $obj over there! Hi $name!" 
 
-        "Have you seen $name? I borrowed a book from $obj earlier and want to return it to them, but I can't seem to find $obj anywhere! If you see $name, can you let $obj know I'm looking for them?" 
+        "Have you seen $name? I borrowed a book from $obj earlier and want to return it to $obj, but I can't seem to find $obj anywhere! If you see $name, can you let $obj know I'm looking for $obj?" 
 
-        "Do you see that person over there? $pod name is $name, and $sub1 my friend! $sub1 super nice, I think you would get along great with them. Do you want to go say hi to them? I'm sure $sub would be glad to meet you!" 
+        "Do you see that person over there? $pod name is $name, and $sub1 my friend! $sub1 super nice, I think you would get along great with $obj. Do you want to go say hi to $obj? I'm sure $sub would be glad to meet you!" 
 
         "Do you know where $name is? I've been trying to find them. I wanted to ask $obj a question, but $pod phone is turned off. Maybe $sub1 busy at the moment. I'll just try to call $obj tomorrow again!" 
 
         "My partner $name gave me this bouquet, aren’t the flowers so pretty? $sub put my favorite flowers in this bouquet." 
 
-        "Where is $name? $sub’re never late." 
+        "Where is $name? $sub1 never late." 
 
         "$name is going to have a job interview later. Wish $obj luck!" 
 
         "This is my younger sibling $name. $sub’re very busy with school and work." 
 
-        "$name is the best child any parent can ask for. $sub’re very polite and compassionate." 
+        "$name is the best child any parent can ask for. $sub1 very polite and compassionate." 
 
-        "Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub’re very good at it. Maybe $sub can give me some advice." 
+        "Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub1 very good at it. Maybe $sub can give me some advice." 
 
-        "The food here is so good! Thanks for taking us here, $name! See? I told you $name knows all the best restaurants in town!" 
+        "The food here is so good! Thanks for taking us here, $name! See? I told you $sub knows all the best restaurants in town!" 
     )
     length=${#arr[*]}
     echo "
