@@ -1,0 +1,255 @@
+#!/bin/bash
+
+#trying to make a full package identity crisis!! yayyy
+    echo "»»——⍟——«« WELCOME TO PRONOUN TRYOUTS »»——⍟——««
+    the 'how other people will read you', simplified version"
+    echo "
+    please enter your NAME and PRONOUNS"
+    echo '
+    common options:
+    type [he] for [he/him/his/his/himself]
+    type [she] for [she/her/her/hers/herself]
+    type [they] for [they/them/their/theirs/themself]
+    type [oth] for [custom pronouns]
+    type [name] for [name only]
+    ------
+    type [m] for [masculine descriptors]
+    type [f] for [feminine descriptors]
+    type [x] for [neutral descriptors]'
+# find a way to save cookies for presets??
+
+function getID {
+    echo "
+    please enter your name and gender here:
+    e.g. Mary she f ; Tim oth x ; Ann name m"
+    read -r name pron gender
+
+    if [ -z "$name" ]; then
+    getID
+    fi
+
+    if [ -z "$pron" ]; then
+    getID
+    fi
+
+    if [ -z "$gender" ]; then
+    getID
+    fi
+}
+getID
+
+function loadprns {
+
+    if [ "$pron" = "he" ]; then
+    sub="he"
+    obj="him"
+    pod="his"
+    pop="his"
+    ref="himself"
+    sub1="$sub's"
+    sub2="$sub's"
+    subHave="$sub has"
+    # I need subGOES too help argh
+    subIs="$sub is"
+
+    elif [ "$pron" = "she" ]; then
+    sub="she"
+    obj="her"
+    pod="her"
+    pop="hers"
+    ref="herself"
+    sub1="$sub's"
+    sub2="$sub's"
+    subHave="$sub has"
+    subIs="$sub is"
+
+    elif [ "$pron" = "they" ]; then
+    sub="they"
+    obj="them"
+    pod="their"
+    pop="theirs"
+    ref="themself"
+    sub1="$sub're"
+    sub2="$sub've"
+    subHave="$sub have"
+    subIs="$sub are"
+
+    elif [ "$pron" = "oth" ]; then
+    echo '
+    please enter your pronouns:'
+    read -r sub obj pod pop ref
+    sub1="$sub's"
+    sub2="$sub's"
+    subHave="$sub has"
+    subIs="$sub is"
+
+    elif [ "$pron" = "name" ]; then
+    sub="$name"
+    obj="$name"
+    pod="$name's"
+    pop="$name's"
+    ref="$name"
+    sub1="$sub's"
+    sub2="$sub's"
+    subHave="$sub has"
+    subIs="$sub is"
+
+    else
+    getID
+
+    fi
+
+}
+#need to make variables for $adr for Miss, Mr
+#Miss, Ma'am, Sir 
+#$child for son, daughter, child
+#$sib for sister, brother, sibling
+#$parent mother, mum; father, dad; parent
+loadprns
+
+# 
+function loadgender {
+
+    if [ "$gender" = "m" ]; then
+    title="Mr"
+    person="guy"
+    child="son"
+    sib="brother"
+    partner="boyfriend"
+    
+    elif [ "$gender" = "f" ]; then
+    title="Ms"
+    person="girl"
+    child="daughter"
+    sib="sister"
+    partner="girlfriend"
+
+    elif [ "$gender" = "x" ]; then
+    title=""
+    person="person"
+    child="child"
+    sib="sibling"
+    partner="partner"
+
+    else
+    getID
+
+    fi
+
+}
+loadgender
+
+function getMessage {
+    #40 messages so far
+    #REMEMBER TO REMIVE ECHO LENGTH BEFORE COMMIT IF YOU HAVEN'T
+    arr=(
+        "Have I introduced you to $name? $sub1 my $sib. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with another $person. I think you'll really like $name, $sub1 really cool." 
+
+        "I've known $name since we were children. $sub is the kindest $person I know, and so are $pod parents, who always shower their $child's friends with tasty snacks when they come over to play with $pod."
+
+        "$name is a $person that I met today. I get along really well with $obj, it's like $sub is the $sib that I never had! You should meet $obj too, you'll love $obj too."
+
+        #"Have you met $name yet? $sub1 in my chemistry class. Me and $name sat next to each other one time and talked about birds until the teacher told us to be quiet. I find $pod name very interesting." 
+
+        #"$name forgot $pod wallet today, do you have some spare cash to lend $obj? When you’ve finished your part on the document, send it to $name, $sub can take care of the rest." 
+
+        "Hey, it's $name! $sub1 so cute and smart! $name is real good with computers too, $sub helped me out recently. I hope I'll be meeting $obj again soon, I love to hang out with $obj!" 
+
+        "$name's parents must be so lucky to have a $child like $obj. $sub is such a reliable $person, $pod parents never have to worry about $obj." 
+
+        "My $partner $name gave me this bouquet, aren’t the flowers so pretty? $sub put my favorite flowers in this bouquet, $sub is so thoughtful." 
+        
+        #"$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s cute but I’m not paying for everything just yet!" 
+
+        "$name is a really cool $person. $subIs always there for $pod friends and all $pod friends know this and love $obj for it. $sub should be coming to meet us for a coffee soon. I'm sure $sub'd love to show you some of $pod work." 
+
+        #"Yeah, I went and saw a movie with $name yesterday and $sub said it gave $obj great inspiration for project $subIs working on. I hope it goes well for $obj!" 
+
+        "I met a really cool $person today named $name! $sub and I talked about different things we are interested in. $sub told me about $pod favorite movies, and I think $subHave great taste!" 
+
+        #"$name asked me to be on one of $pod films the other day, I really love how much $sub cares about those things, but damn I'll need some acting classes, $sub1 my friend 'yknow, I don't want to let $obj down." 
+
+        "Do you know $name? $sub1 my friend, and $sub1 really cool $person! You should meet $obj, I think you'd get along really well with $obj!" 
+
+        #"$name told me about this show $sub2 been watching. $sub said it's really good! $sub said I should check it out sometime." 
+
+        #"$name's birthday is soon. $sub invited me to $obj party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Has $sub been talking about anything $sub'd like to have?" 
+
+        #"I met $name at the park yesterday. I haven't seen $obj in quite some time, so it was nice to catch up with $obj! Talking to $obj is always so much fun. I'd love to meet up with $obj soon again!" 
+
+        #"Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it $ref, or if $sub go to a hairdresser. I should ask $obj when I see $obj again!" 
+
+        #"A couple of days ago, I met $name. I got to talk to $obj for a bit and $sub seemed really cool! $sub suggested we go to the cinema together this weekend. Do you maybe want to join us and say hi to them? I'm sure $name would be happy to introduce $ref to you!" 
+
+        #"$name and I were supposed to meet up here, but $sub seem to be running late. I've thought about calling them, but maybe $sub1 just stuck in traffic. $sub mentioned the roads tend to be quite busy during this time of the day. I'm sure $sub will be here soon. Oh, wait, I think that's $obj over there! Hi $name!" 
+
+        #"Have you seen $name? I borrowed a book from $obj earlier and want to return it to $obj, but I can't seem to find $obj anywhere! If you see $name, can you let $obj know I'm looking for $obj?" 
+
+        #"Do you see that person over there? $pod name is $name, and $sub1 my friend! $sub1 super nice, I think you would get along great with $obj. Do you want to go say hi to $obj? I'm sure $sub would be glad to meet you!" 
+
+        #"Do you know where $name is? I've been trying to find $obj. I wanted to ask $obj a question, but $pod phone is turned off. Maybe $sub1 busy at the moment. I'll just try to call $obj tomorrow again!" 
+
+        "This is my younger $sib $name. $sub1 very busy with school and work." 
+
+        "$name is the best $child any parent can ask for. $sub1 very polite and compassionate." 
+
+        #"Do you think I can ask $name to help me with this? I don’t know how to do this and I know $sub1 very good at it. Maybe $sub can give me some advice." 
+
+        #"The food here is so good! Thanks for taking us here, $name! See? I told you $name knows all the best restaurants in town!" 
+    )
+    length=${#arr[*]}
+    echo "
+    loading..."
+    sleep 0.85
+    echo "${arr[ $RANDOM % $((length-1)) ]}"
+}
+getMessage
+
+function newMessage {
+    echo '
+    Generate another message? [y/n]
+    Press [x] to view/edit name and pronouns'
+
+    read -r response
+
+    if [ -z "$response" ]; then
+    response=null
+    newMessage
+
+    elif [ "$response" = "y" ]; then
+    getMessage
+    newMessage
+
+    elif [ "$response" = "n" ]; then
+    echo "
+    Goodbye!"
+    exit
+
+    elif [ "$response" = "x" ]; then
+    echo "   " "$name" "$pron" "$sub" "$obj" "$pod" "$pop" "$ref"
+    function editprn {
+        echo "    Edit pronouns? [y/n]"
+        read -r edit
+        if [ "$edit" = "y" ]; then
+        getID
+        loadprns
+        getMessage
+        newMessage
+        elif [ "$edit" = "n" ]; then
+        newMessage
+        else
+        editprn
+        fi
+
+    }
+    editprn
+    
+    else
+    response=null
+    newMessage
+
+    fi
+
+}
+newMessage
+
