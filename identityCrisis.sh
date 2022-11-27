@@ -1,10 +1,11 @@
 #!/bin/bash
 
 #trying to make a full package identity crisis!! yayyy
+#I JUST HAD THE BEST IDEA!! RUSSIAN ROULETTE MODE, FOR QUESTIONING PPL WHO CAN'T FIGURE OUT WHICH THEY LIKE HAHAHA
     echo "»»——⍟——«« WELCOME TO PRONOUN TRYOUTS »»——⍟——««
     the 'how other people will read you', simplified version"
     echo "
-    please enter your NAME and PRONOUNS"
+    please enter your NAME, PRONOUNS and PREFERRED DESCRIPTORS"
     echo '
     common options:
     type [he] for [he/him/his/his/himself]
@@ -107,29 +108,37 @@ function loadprns {
 #$parent mother, mum; father, dad; parent
 loadprns
 
-# 
 function loadgender {
 
     if [ "$gender" = "m" ]; then
     title="Mr"
+    title1="sir"
     person="guy"
     child="son"
     sib="brother"
     partner="boyfriend"
+    parent="father"
+    compl="handsome"
     
     elif [ "$gender" = "f" ]; then
     title="Ms"
+    title2="miss"
     person="girl"
     child="daughter"
     sib="sister"
     partner="girlfriend"
+    parent="mother"
+    compl="pretty"
 
     elif [ "$gender" = "x" ]; then
-    title=""
+    title="Mx"
+    title1=""
     person="person"
     child="child"
     sib="sibling"
     partner="partner"
+    parent="parent"
+    compl="cute"
 
     else
     getID
@@ -141,25 +150,31 @@ loadgender
 
 function getMessage {
     #40 messages so far
-    #REMEMBER TO REMIVE ECHO LENGTH BEFORE COMMIT IF YOU HAVEN'T
+    #REMEMBER TO REMOVE ECHO LENGTH BEFORE COMMIT IF YOU HAVEN'T
     arr=(
         "Have I introduced you to $name? $sub1 my $sib. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with another $person. I think you'll really like $name, $sub1 really cool." 
 
-        "I've known $name since we were children. $sub is the kindest $person I know, and so are $pod parents, who always shower their $child's friends with tasty snacks when they come over to play with $pod."
+        "I've known $name since we were children. $sub is the kindest $person I know, and so are $pod parents, who always shower their $child's friends with tasty snacks when they come over to play with $pod." 
 
-        "$name is a $person that I met today. I get along really well with $obj, it's like $sub is the $sib that I never had! You should meet $obj too, you'll love $obj too."
+        "$name is a $person that I met today. I get along really well with $obj, it's like $sub is the $sib that I never had! You should meet $obj too, you'll love $obj too." 
 
-        #"Have you met $name yet? $sub1 in my chemistry class. Me and $name sat next to each other one time and talked about birds until the teacher told us to be quiet. I find $pod name very interesting." 
+        "$title $name is the most reliable worker in this department. $sub has ben working here for more than 7 years and knows the work here like the back of $pod hand." 
 
-        #"$name forgot $pod wallet today, do you have some spare cash to lend $obj? When you’ve finished your part on the document, send it to $name, $sub can take care of the rest." 
+        "Excuse me $title1, do you need any help? The $person's clothing section is over there, I'm sure you'd find something suitable for a $compl $person like you." 
 
-        "Hey, it's $name! $sub1 so cute and smart! $name is real good with computers too, $sub helped me out recently. I hope I'll be meeting $obj again soon, I love to hang out with $obj!" 
+        "$title $name? What a coincidence, seeing you here! Do you come here often?"
 
-        "$name's parents must be so lucky to have a $child like $obj. $sub is such a reliable $person, $pod parents never have to worry about $obj." 
+        "My $child $name just won a country-wide competition! Isn't that awesome? Go on $name, tell them about it!" 
+
+        "Hey, it's $name! $sub1 so $compl and smart! $name is real good with computers too, $sub helped me out recently. I hope I'll be meeting $obj again soon, I love to hang out with $obj!" 
+
+        "$name's parents must be so lucky to have a $child like $obj. $sub is such a reliable $person, I bet $pod parents never have to worry about $obj." 
 
         "My $partner $name gave me this bouquet, aren’t the flowers so pretty? $sub put my favorite flowers in this bouquet, $sub is so thoughtful." 
+
+        "I can't believe I managed to find such a $compl $partner like $name! $sub is such a considerate $person too, and spending time with $obj always makes me feel at ease. I'm so lucky!"
         
-        #"$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s cute but I’m not paying for everything just yet!" 
+        #"$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s $compl but I’m not paying for everything just yet!" 
 
         "$name is a really cool $person. $subIs always there for $pod friends and all $pod friends know this and love $obj for it. $sub should be coming to meet us for a coffee soon. I'm sure $sub'd love to show you some of $pod work." 
 
@@ -189,7 +204,7 @@ function getMessage {
 
         #"Do you know where $name is? I've been trying to find $obj. I wanted to ask $obj a question, but $pod phone is turned off. Maybe $sub1 busy at the moment. I'll just try to call $obj tomorrow again!" 
 
-        "This is my younger $sib $name. $sub1 very busy with school and work." 
+        "This is my younger $sib $name. $sub1 very busy with school and work, but $sub said $sub wanted to meet you." 
 
         "$name is the best $child any parent can ask for. $sub1 very polite and compassionate." 
 
@@ -227,22 +242,23 @@ function newMessage {
 
     elif [ "$response" = "x" ]; then
     echo "   " "$name" "$pron" "$sub" "$obj" "$pod" "$pop" "$ref"
-    function editprn {
+    function editID {
         echo "    Edit pronouns? [y/n]"
         read -r edit
         if [ "$edit" = "y" ]; then
         getID
         loadprns
+        loadgender
         getMessage
         newMessage
         elif [ "$edit" = "n" ]; then
         newMessage
         else
-        editprn
+        editID
         fi
 
     }
-    editprn
+    editID
     
     else
     response=null
