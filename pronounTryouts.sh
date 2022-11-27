@@ -127,7 +127,9 @@ function getMessage {
 
         "I don’t know if $name prefers cheese sauce or ketchup, let’s just get both for $obj. If $sub doesn’t want it, then I’ll just take the sauce." 
 
-        "$name forgot $pod wallet today, do you have some spare cash to lend $obj? When you’ve finished your part on the document, send it to $name, $sub can take care of the rest." 
+        "$name forgot $pod wallet today, do you have some spare cash to lend $obj?" 
+        
+        "When you’ve finished your part on the document, send it to $name, $sub can take care of the rest." 
 
         "Hey, it's $name! $sub1 so cute and smart! $name is real good with computers too, $sub helped me out recently. I hope I'll be meeting $obj again soon, I love to hang out with $obj!" 
 
@@ -152,8 +154,6 @@ function getMessage {
         "$name's birthday is soon. $sub invited me to $obj party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Has $sub been talking about anything $sub'd like to have?" 
 
         "I met $name at the park yesterday. I haven't seen $obj in quite some time, so it was nice to catch up with $obj! Talking to $obj is always so much fun. I'd love to meet up with $obj soon again!" 
-
-        "$name's birthday is soon. $sub invited me to $pod party, but I still need to get a present for $obj! You're $pod best friend, aren't you? Do you know what $sub likes the most? Have $sub been talking about anything $sub would like to have?" 
 
         "Have you seen $name? $sub2 got a new haircut, and it suits $obj really well! I wonder if $sub cut it $ref, or if $sub go to a hairdresser. I should ask $obj when I see $obj again!" 
 
