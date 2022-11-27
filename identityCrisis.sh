@@ -184,7 +184,7 @@ function getMessage {
 
         #"$name asked me to be on one of $pod films the other day, I really love how much $sub cares about those things, but damn I'll need some acting classes, $sub1 my friend 'yknow, I don't want to let $obj down." 
 
-        "Do you know $name? $sub1 my friend, and $sub1 really cool $person! You should meet $obj, I think you'd get along really well with $obj!" 
+        "Do you know $name? $sub1 my friend, and $sub1 a really cool $person! You should meet $obj, I think you'd get along really well with $obj!" 
 
         #"$name told me about this show $sub2 been watching. $sub said it's really good! $sub said I should check it out sometime." 
 
