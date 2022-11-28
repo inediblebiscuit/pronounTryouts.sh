@@ -2,9 +2,9 @@
 
 #trying to make a full package identity crisis!! yayyy
 #I JUST HAD THE BEST IDEA!! RUSSIAN ROULETTE MODE, FOR QUESTIONING PPL WHO CAN'T FIGURE OUT WHICH THEY LIKE HAHAHA
-    echo "»»——⍟——«« WELCOME TO PRONOUN TRYOUTS »»——⍟——««
-    the 'how other people will read you', simplified version"
+    echo "»»——⍟——«« WELCOME TO PRONOUN TRYOUTS »»——⍟——««"
     echo "
+    the 'how other people will read you', simplified version
     please enter your NAME, PRONOUNS and PREFERRED DESCRIPTORS"
     echo '
     common options:
@@ -21,7 +21,7 @@
 
 function getID {
     echo "
-    please enter your name and gender here:
+    please enter your name, pronouns and descriptor here:
     e.g. Mary she f ; Tim oth x ; Ann name m"
     read -r name pron gender
 
@@ -116,16 +116,18 @@ function loadgender {
     person="guy"
     child="son"
     sib="brother"
+    sib1="bro"
     partner="boyfriend"
     parent="father"
     compl="handsome"
     
     elif [ "$gender" = "f" ]; then
     title="Ms"
-    title2="miss"
+    title1="miss"
     person="girl"
     child="daughter"
     sib="sister"
+    sib1="sis"
     partner="girlfriend"
     parent="mother"
     compl="pretty"
@@ -136,6 +138,7 @@ function loadgender {
     person="person"
     child="child"
     sib="sibling"
+    sib1="sib"
     partner="partner"
     parent="parent"
     compl="cute"
@@ -154,27 +157,43 @@ function getMessage {
     arr=(
         "Have I introduced you to $name? $sub1 my $sib. Oh man, I thought I'd introduce $obj to you! $sub1 super cool! We share a flat together with another $person. I think you'll really like $name, $sub1 really cool." 
 
-        "I've known $name since we were children. $sub is the kindest $person I know, and so are $pod parents, who always shower their $child's friends with tasty snacks when they come over to play with $pod." 
+        "I've known $name since we were children. $sub is the kindest $person I know, and so are $pod parents, who always shower their $child's friends with tasty snacks when they come over to play with $obj." 
 
-        "$name is a $person that I met today. I get along really well with $obj, it's like $sub is the $sib that I never had! You should meet $obj too, you'll love $obj too." 
+        "$name is a $person that I met today. I get along really well with $obj, it's like $sub is the $sib that I never had! You should meet $obj too, you'll love $obj." 
 
-        "$title $name is the most reliable worker in this department. $sub has ben working here for more than 7 years and knows the work here like the back of $pod hand." 
+        "$name is the most reliable worker in this department. $sub has been working here for more than 7 years and knows the work here like the back of $pod hand." 
 
         "Excuse me $title1, do you need any help? The $person's clothing section is over there, I'm sure you'd find something suitable for a $compl $person like you." 
 
-        "$title $name? What a coincidence, seeing you here! Do you come here often?"
+        "$name is my $sib, and $sub is the best! $sub is always so much fun to hang out with, and always teaches me what I don't understand. I'm so glad to have a $sib like $obj!" 
+
+        "$name is my $sib-in-law, I haven't known $obj for long but we hit it off really quickly." 
+
+        "I have two ${child}s, $name and $pod $sib. $name and $pod $sib bicker and fight like all siblings do, but at the end of the day the ${sib}s have a very good relationship." 
 
         "My $child $name just won a country-wide competition! Isn't that awesome? Go on $name, tell them about it!" 
 
         "Hey, it's $name! $sub1 so $compl and smart! $name is real good with computers too, $sub helped me out recently. I hope I'll be meeting $obj again soon, I love to hang out with $obj!" 
 
+        "I'm busy. Go play with your $sib $name instead, I'm sure playing with $obj will be much more fun than bothering me. Now shoo, I have work to do." 
+
+        "$title1, do you have a moment? Would you like to hear about out brand new insurance model? I promise this will be worth your time." 
+
         "$name's parents must be so lucky to have a $child like $obj. $sub is such a reliable $person, I bet $pod parents never have to worry about $obj." 
+
+        "$name is my new colleague at work. $sub is always so busy, I couldn't even introduce myself during break. I talked to $obj once, but it was very brief. $sub is so hardworking, but difficult to talk to." 
+
+        "$name sprained $pod ankle a few days ago, I wonder how $sub is doing now. I'm going to check on $obj at $pod house later today and keep $obj company while $sub recovers." 
+
+        "$name's mother had 4 ${child}s in all. The first one was named May. The second and third were called June and July respectively. What was the fourth $child’s name?" 
+
+        "A $person was rushed to the hospital emergency room. The ER doctor saw the $person and said, “I cannot operate on $obj. $sub is my $child.” But the doctor was not the $person's father. How could that be?" 
 
         "My $partner $name gave me this bouquet, aren’t the flowers so pretty? $sub put my favorite flowers in this bouquet, $sub is so thoughtful." 
 
-        "I can't believe I managed to find such a $compl $partner like $name! $sub is such a considerate $person too, and spending time with $obj always makes me feel at ease. I'm so lucky!"
+        "I can't believe I managed to find such a $compl $partner like $name! $sub is such a considerate $person too, and spending time with $obj always makes me feel at ease. I'm so lucky!" 
         
-        #"$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s $compl but I’m not paying for everything just yet!" 
+        "$name is on $pod way to the store. $sub’s gonna buy something for us today. I hope $sub brought $pod wallet and not mine. $sub’s $compl but I’m not paying for everything just yet!" 
 
         "$name is a really cool $person. $subIs always there for $pod friends and all $pod friends know this and love $obj for it. $sub should be coming to meet us for a coffee soon. I'm sure $sub'd love to show you some of $pod work." 
 
@@ -220,11 +239,16 @@ function getMessage {
 }
 getMessage
 
-function newMessage {
-    echo '
-    Generate another message? [y/n]
-    Press [x] to view/edit name and pronouns'
 
+echo "
+    Enter [y] to generate another message
+    Enter [n] to end program
+    Enter [x] to view or edit name, pronouns and descriptors
+    note: this is the last time this message will be displayed.
+          commands will still work afterwards."
+
+
+function newMessage {
     read -r response
 
     if [ -z "$response" ]; then
@@ -241,9 +265,12 @@ function newMessage {
     exit
 
     elif [ "$response" = "x" ]; then
-    echo "   " "$name" "$pron" "$sub" "$obj" "$pod" "$pop" "$ref"
+    echo "    name: $name"
+    echo "    pronouns: $sub/$obj/$pod/$pop/$ref"
+    echo "    descriptors: $gender: $title1 $person $child $sib $partner $compl"
+    #no $parent cos not used
     function editID {
-        echo "    Edit pronouns? [y/n]"
+        echo "    Would you like to edit anything? [y/n]"
         read -r edit
         if [ "$edit" = "y" ]; then
         getID
