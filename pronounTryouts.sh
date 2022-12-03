@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
     echo "»»——⍟——«« WELCOME TO PRONOUN TRYOUTS »»——⍟——««"
     echo "
     please enter your NAME and PRONOUNS"
