@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #trying to make a full package identity crisis!! yayyy
 #I JUST HAD THE BEST IDEA!! RUSSIAN ROULETTE MODE, FOR QUESTIONING PPL WHO CAN'T FIGURE OUT WHICH THEY LIKE HAHAHA
