@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#the only thing missing here is the non-gendered only name and pron messages
+
+#USE ARRAYS to replace things... associate each gender with a value... and then .format(sibling[gender])
+#is there a way to do this in bash? or I could rewrite this in python, ez?
+
 #trying to make a full package identity crisis!! yayyy
 #I JUST HAD THE BEST IDEA!! RUSSIAN ROULETTE MODE, FOR QUESTIONING PPL WHO CAN'T FIGURE OUT WHICH THEY LIKE HAHAHA
     echo "»»——⍟——«« WELCOME TO PRONOUN TRYOUTS »»——⍟——««"
